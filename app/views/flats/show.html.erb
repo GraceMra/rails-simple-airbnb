@@ -1,9 +1,17 @@
 <div class="container">
 
-  <h1> <%= @flat.name %> </h1>
-  <h2> <%= @flat.address %> </h2>
-  <h3> <%= @flat.category %> </h3>
-
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+          <div class="card-category">
+            <%= @flat.price_per_night %> €
+          </div>
+          <div class="card-description">
+            <h2><%= @flat.name %></h2>
+            <p>
+              <%= @flat.description %>
+            </p>
+            <p>Guests : <%= @flat.number_of_guests %></p>
+          </div>
+        </div>
   <hr>
 
   <%= link_to "< Back to list", flats_path %>
